@@ -1,0 +1,18 @@
+{
+  "name": "softcon-exercises-load-test",
+  "version": "0.0.0",
+  "description": "It uses locust",
+  "main": "index.js",
+  "scripts": {
+    "build": "gcloud --project softcon-exercises builds submit --tag gcr.io/softcon-exercises/softcon-exercises-load-test",
+    "create-cluster": "export PROJECT_ID=softcon-exercises && ./create-cluster.sh",
+    "deploy": "kubectl create -f loadtest-deployment.yml",
+    "check": "kubectl get svc locust-master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tjmonsi/tjmonsi/softcon-exercises"
+  },
+  "author": "TJ Monserrat",
+  "license": "MIT"
+}
