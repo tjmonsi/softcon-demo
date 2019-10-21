@@ -1,0 +1,10 @@
+Flask
+gunicorn
+google-cloud-logging==1.8.0
+google-cloud-error_reporting==0.30.0
+
+pylint
+pytest
+pytest-flask
+
+eventlet
