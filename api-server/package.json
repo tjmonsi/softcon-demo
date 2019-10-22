@@ -6,10 +6,12 @@
   "scripts": {
     "test": "pytest -v",
     "start": "gunicorn -b :8080 run:app",
-    "build-dev": "gcloud --project softcon-exercises builds submit --tag gcr.io/softcon-exercises/softcon-exercises",
-    "deploy-dev": "gcloud --project softcon-exercises beta run deploy --image gcr.io/softcon-exercises/softcon-exercises --no-allow-unauthenticated",
-    "run-dev": "PORT=8080 && docker run -p 8080:${PORT} -e PORT=${PORT} gcr.io/softcon-exercises/softcon-exercises",
-    "deploy-openapi-dev": "gcloud endpoints services deploy openapi-run.yaml --project softcon-exercises"
+    "build": "gcloud --project softcon-exercises builds submit --tag gcr.io/softcon-exercises/softcon-exercises",
+    "deploy": "gcloud --project softcon-exercises beta run deploy --image gcr.io/softcon-exercises/softcon-exercises",
+    "deploy-secured": "gcloud --project softcon-exercises beta run deploy --image gcr.io/softcon-exercises/softcon-exercises --no-allow-unauthenticated",
+    "deploy-openapi": "gcloud endpoints services deploy openapi-run.yaml --project softcon-exercises",
+    "create-token": "gcloud auth print-identity-token --project softcon-exercises",
+    "test-security": "curl -H \"Authorization: Bearer $(gcloud auth print-identity-token --project softcon-exercises)\" https://softcon-exercises-hv56hizgwq-uc.a.run.app/random"
   },
   "repository": {
     "type": "git",

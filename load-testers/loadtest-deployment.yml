@@ -23,7 +23,7 @@ spec:
             - name: LOCUST_MODE
               value: master
             - name: TARGET_HOST
-              value: https://softcon-exercises-01-hv56hizgwq-uc.a.run.app/
+              value: https://softcon-exercises-hv56hizgwq-uc.a.run.app/
           ports:
             - name: loc-master-web
               containerPort: 8089
@@ -62,7 +62,7 @@ spec:
             - name: LOCUST_MASTER
               value: locust-master
             - name: TARGET_HOST
-              value: https://softcon-exercises-01-hv56hizgwq-uc.a.run.app/
+              value: https://softcon-exercises-hv56hizgwq-uc.a.run.app/
 ---
 kind: Service
 apiVersion: v1

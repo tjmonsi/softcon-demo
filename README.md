@@ -1,4 +1,4 @@
-# base-js-template
+# Softcon-demo
 
 This will be my base JS template for Github and Gitlab.
 
