@@ -1,5 +1,5 @@
 certifi==2019.9.11
-chardet==3.0.4
+chardet==4.0.0
 Click==7.0
 Flask==1.1.1
 gevent==1.4.0
